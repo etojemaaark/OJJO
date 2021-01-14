@@ -26,6 +26,9 @@
 			border: 1px solid #d6d6d6;
 			position: relative;
 			transition: 0.4s;
+			&:first-child{
+				
+			}
 			&::after {
 				content: "";
 				position: absolute;
@@ -38,7 +41,6 @@
 			}
 			&:active {
 				top: 3px;
-				box-shadow: red;
 			}
 			&:active::after {
 				top: 0;

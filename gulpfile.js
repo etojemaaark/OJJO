@@ -28,7 +28,7 @@ let path = {
 		js: source_folder + "/js/**/*.js",
 		img: source_folder + "/img/**/*.{jpg,png,svg,gif.ico,webp}",
 	},
-	clean: "./" + project_folder + "/",
+	clean: "/" + project_folder + "/",
 };
 
 // Подключаем плагины

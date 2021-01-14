@@ -469,8 +469,6 @@ a:active {
 
 .category__filter button:active {
   top: 3px;
-  -webkit-box-shadow: red;
-          box-shadow: red;
 }
 
 .category__filter button:active::after {
