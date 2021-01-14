@@ -1,0 +1,105 @@
+.mailing {
+	color: white;
+	background: url("../img/oursalonsbg.png") center/cover no-repeat;
+	&__wrapper {
+		padding: 50px 0 60px 0;
+		text-align: center;
+	}
+	&__items {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		ul {
+			font-size: 18px;
+			line-height: 140%;
+			margin-right: 130px;
+			text-align: left;
+			li {
+				margin-bottom: 15px;
+				position: relative;
+				display: flex;
+				align-items: center;
+				transition: 0.4s;
+				&::before {
+					content: "";
+					display: inline-block;
+					width: 17px;
+					height: 17px;
+					background: url("../img/icons/icons.svg#subscribe") 0 0 / cover no-repeat;
+					margin-right: 15px;
+				}
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	&__form {
+		width: 418px;
+		height: 85px;
+		background-color: white;
+		padding: 20px 22px;
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+		z-index: 0;
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: -15px;
+			left: -15px;
+			width: 448px;
+			height: 113px;
+			border: 1px solid #bf953f;
+			z-index: -1;
+		}
+	}
+}
+.email {
+	width: 200px;
+	height: 45px;
+	background: #ffffff;
+	border: 1px solid #d6d6d6;
+	margin-right: 15px;
+	transition: 0.4s;
+	padding: 15px 20px 14px 20px;
+	&:focus {
+		transform: scale(1.05);
+		box-shadow: 0 0px 4px #bf953f;
+		&::placeholder {
+			opacity: 0;
+			transition: 0.4s ease;
+		}
+	}
+	&::placeholder {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 16px;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: rgba(51, 51, 51, 0.5);
+	}
+}
+.submit {
+	width: 159px;
+	height: 45px;
+	background: #333333;
+	border: 1px solid #ffffff;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	text-align: center;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: white;
+	transition: 0.4s;
+	&:hover {
+		transform: scale(1.05);
+		color: #bf953f;
+	}
+	&:active {
+		color: #aa771c;
+	}
+}

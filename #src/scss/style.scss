@@ -1,0 +1,81 @@
+/// ОБНУЛЕНИЕ СТИЛЕЙ ///
+
+@import "nullstyle.scss";
+
+/// МИКСИНЫ ///
+
+@import "mixins.scss";
+
+/// ПОДКЛЮЧЕНИЕ ШРИФТОВ ///
+
+@import "fonts.scss";
+$ff: "Gilroy"; /// ШРИФТ ПО УМОЛЧАНИЮ
+
+/// ПЕРЕМЕННЫЕ ///
+
+$minWidth: 320px;
+$maxWidth: 1100px;
+$md2: 750;
+$md3: 767.98;
+$md4: 479.98;
+
+/// ОСНОВНАЯ СЕТКА ///
+body {
+	font-family: $ff;
+}
+h1,
+h2 {
+	font-weight: 700;
+	letter-spacing: 0.1em;
+}
+h2 {
+	display: inline-block;
+}
+a {
+	transition: 0.3s;
+	&:hover {
+		color: #bf953f;
+		text-decoration: underline;
+	}
+	&:active {
+		color: #aa771c;
+	}
+}
+
+.container {
+	max-width: $maxWidth;
+	margin: 0 auto;
+	width: 100%;
+}
+.subtitle {
+	font-size: 21px;
+	line-height: 140%;
+	text-align: center;
+	margin-bottom: 15px;
+}
+.title {
+	font-size: 30px;
+	line-height: 41px;
+	text-align: center;
+	margin-bottom: 60px;
+	transition: 0.4s;
+	&:hover {
+		color: #bf953f;
+		transform: scale(1.1);
+	}
+}
+////////////////////////////////////////////
+
+////////////////////////////////////////////
+
+////////////////////////////////////////////
+
+/// ПОДКЛЮЧЕНИЕ СЕКЦИЙ ///
+@import "header.scss";
+@import "main.scss";
+@import "category.scss";
+@import "oursalons.scss";
+@import "advice.scss";
+@import "socials.scss";
+@import "mailing.scss";
+@import "footer.scss";
