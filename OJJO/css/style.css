@@ -252,6 +252,7 @@ a:active {
 .header__right a:nth-child(3) svg {
   width: 16px;
   height: 16px;
+  fill: white;
 }
 
 .header__right a:nth-child(3):hover {
