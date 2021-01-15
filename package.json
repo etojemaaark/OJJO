@@ -34,5 +34,7 @@
 		"jquery": "^3.5.1",
 		"rename": "^1.0.4"
 	},
-	"dependencies": {}
+	"dependencies": {
+		"animate.css": "^4.1.1"
+	}
 }

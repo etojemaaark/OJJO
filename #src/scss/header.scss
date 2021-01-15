@@ -2,7 +2,7 @@
 	position: relative;
 	background: url("../img/topbackground.png") center/cover no-repeat;
 	width: 100%;
-	height: 937px;
+	height: 100%;
 }
 .header {
 	&__wrapper {
@@ -37,6 +37,7 @@
 	&__right {
 		display: flex;
 		justify-content: space-between;
+		
 		a {
 			&:nth-child(2) {
 				margin-right: 40px;
@@ -47,7 +48,6 @@
 				svg {
 					width: 16px;
 					height: 16px;
-					fill: white;
 				}
 				&:hover {
 					stroke: #bf953f;

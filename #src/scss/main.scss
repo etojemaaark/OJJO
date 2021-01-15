@@ -1,11 +1,10 @@
 .main {
 	&__top {
 		position: absolute;
-		top: 50%;
+		bottom: 0;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		text-align: center;
-		margin-top: 245px;
 		h1 {
 			font-size: 36px;
 			line-height: 49px;
