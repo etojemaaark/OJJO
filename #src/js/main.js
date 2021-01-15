@@ -2,48 +2,60 @@
 
 new Swiper(".swiper-container", {
 	// Стрелки //
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev'
+	// navigation: {
+	// 	nextEl: '.swiper-button-next',
+	// 	prevEl: '.swiper-button-prev'
+	// },
+	// slidesPerView: 6,
+	grabCursor: true,
+	pagination: {
+		el: '.swiper-pagination',
+		type: 'bullets',
 	},
-	slidesPerView: 4,
-});
-$(window).resize(function (event) {
-	adaptive_function();
-});
-function adaptive_header(w, h) {
-	var headerMenu = $('header__menu');
-	var headerLang = $('header__top-lang');
-	if (w < 767) {
-		if (!headerLang.hasClass('done')) {
-			headerLang.addClass('done').appendTo(headerMenu);
-		}
-	} else {
-		if (headerLang.hasClass('done')) {
-			headerLang.removeClass('done').prependTo($('.header__top'));
-		}
+	autoplay: {
+		delay: 1000,
+		disableOnInteraction: false,
+	},
+	loop: true,
+	speed: 1000,
+	breakpoints: {
+		320: {
+			slidesPerView: 1,
+		},
+		380: {
+			slidesPerView: 2,
+		},
+		570: {
+			slidesPerView: 3,
+		},
+		730: {
+			slidesPerView: 4,
+		},
+		950: {
+			slidesPerView: 5,
+		},
+		1050: {
+			slidesPerView: 6,
+		},
 	}
-	if (w < 767) {
-		if (!$('.header__bottom-menu').hasClass('done')) {
-			$('.header__bottom-menu').addClass('done').appendTo(headerMenu);
-		}
-	} else {
-		$.each($('.header__bottom-menu'), function (index, val) {
-			if ($(this).hasClass('header-bottom-menu--right')) {
-				if ($(this).hasClass('done')) {
-					$(this).removeClass('done').prependTo($('.header-bottom__column').eq(2));
-				}
-			} else {
-				if ($(this).hasClass('done')) {
-					$(this).removeClass('done').prependTo($('.header-bottom__column').eq(0));
-				}
-			}
-		});
-	}
-}
-function adaptive_function() {
-	var w = $(window).outerWidth();
-	var h = $(window).outerHeight();
-	adaptive_header(w, h);
-}
-adaptive_function();
+});
+
+/// ТАБЫ ///
+
+var jsTriggers = document.querySelectorAll('.js-tab-trigger'),
+	jsContents = document.querySelectorAll('.js-tab-content');
+
+jsTriggers.forEach(function (trigger) {
+	trigger.addEventListener('click', function () {
+		var id = this.getAttribute('data-tab'),
+			content = document.querySelector('.js-tab-content[data-tab="' + id + '"]'),
+			activeTrigger = document.querySelector('.js-tab-trigger.active'),
+			activeContent = document.querySelector('.js-tab-content.active');
+
+		activeTrigger.classList.remove('active'); // 1
+		trigger.classList.add('active'); // 2
+
+		activeContent.classList.remove('active'); // 3
+		content.classList.add('active'); // 4
+	});
+});

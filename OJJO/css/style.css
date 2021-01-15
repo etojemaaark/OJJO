@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 * {
   padding: 0;
   margin: 0;
@@ -367,10 +369,12 @@ a:active {
       -ms-transform: scale(1.05);
           transform: scale(1.05);
   color: #bf953f;
+  border: 1px solid #bf953f;
 }
 
 .main__btn:active {
   color: #aa771c;
+  border: 1px solid #aa771c;
 }
 
 .main__bottom {
@@ -378,37 +382,15 @@ a:active {
   width: 100%;
   position: absolute;
   bottom: 0px;
-  border-top: 1px solid white;
+  text-align: center;
 }
 
-.main__partners {
+.swiper-wrapper {
   padding: 30px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-.main__partners li {
-  position: relative;
-}
-
-.main__partners li:first-child::before {
-  display: none;
-}
-
-.main__partners li:before {
-  content: "";
-  position: absolute;
-  left: -15px;
-  width: 1px;
-  height: 60px;
-  background-color: white;
+.swiper-pagination-bullet-active {
+  background: #bf953f !important;
 }
 
 .category__wrapper {
@@ -418,84 +400,6 @@ a:active {
 
 .category__title {
   color: #333333;
-}
-
-.category__filter {
-  margin-bottom: 55px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.category__filter button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 165px;
-  height: 61px;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
-  text-align: center;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  background: #f9f9f9;
-  border: 1px solid #d6d6d6;
-  position: relative;
-  -webkit-transition: 0.4s;
-  -o-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.category__filter button::after {
-  content: "";
-  position: absolute;
-  top: 6px;
-  left: 6px;
-  width: 100%;
-  height: 100%;
-  border: 1px solid #d6d6d6;
-  z-index: -1;
-}
-
-.category__filter button:active {
-  top: 3px;
-}
-
-.category__filter button:active::after {
-  top: 0;
-  left: 0;
-}
-
-.category__filter button:focus:not(:active)::after {
-  top: 0;
-  left: 0;
-}
-
-.category__filter button:focus:not(:active),
-.category__filter button:hover {
-  color: #ffffff;
-  background-color: black;
-}
-
-.category__listing {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 .category__listing-item {
@@ -568,6 +472,110 @@ a:active {
   color: #bf953f;
 }
 
+/* Стили для списка вкладок */
+
+.tab-header {
+  margin-bottom: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* Стили для вкладки */
+
+.tab-header__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 165px;
+  height: 61px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: #f9f9f9;
+  border: 1px solid #d6d6d6;
+  position: relative;
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.tab-header__item::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #d6d6d6;
+  z-index: -1;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.tab-header__item:active {
+  top: 3px;
+}
+
+.tab-header__item:active::after {
+  top: 0;
+  left: 0;
+}
+
+.tab-header__item:focus:not(:active)::after {
+  top: 0;
+  left: 0;
+}
+
+.tab-header__item:focus:not(:active),
+.tab-header__item:hover {
+  color: #ffffff;
+  background-color: black;
+  color: #bf953f;
+}
+
+.tab-header__item.active {
+  background-color: black;
+  color: #bf953f;
+}
+
+.tab-header__item.active::after {
+  display: none;
+}
+
+.tab-content__item {
+  display: none;
+}
+
+.tab-content__item.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.active {
+  top: 0;
+  left: 0;
+}
+
 .oursalons {
   color: white;
   background: url("../img/oursalonsbg.png") center/cover no-repeat;
@@ -607,10 +615,12 @@ a:active {
       -ms-transform: scale(1.05);
           transform: scale(1.05);
   color: #bf953f;
+  border: 1px solid #bf953f;
 }
 
 .oursalons__btn:active {
   color: #aa771c;
+  border: 1px solid #aa771c;
 }
 
 .advice__wrapper {
@@ -708,10 +718,12 @@ a:active {
       -ms-transform: scale(1.05);
           transform: scale(1.05);
   color: #bf953f;
+  border: 1px solid #bf953f;
 }
 
 .advice__btn:active {
   color: #aa771c;
+  border: 1px solid #aa771c;
 }
 
 .socials__wrapper {
@@ -842,12 +854,14 @@ a:active {
   padding: 15px 20px 14px 20px;
 }
 
-.email:focus {
-  -webkit-transform: scale(1.05);
-      -ms-transform: scale(1.05);
-          transform: scale(1.05);
+.email:hover {
   -webkit-box-shadow: 0 0px 4px #bf953f;
           box-shadow: 0 0px 4px #bf953f;
+}
+
+.email:focus {
+  -webkit-box-shadow: 0 0px 4px #aa771c;
+          box-shadow: 0 0px 4px #aa771c;
 }
 
 .email:focus::-webkit-input-placeholder {
@@ -948,10 +962,12 @@ a:active {
       -ms-transform: scale(1.05);
           transform: scale(1.05);
   color: #bf953f;
+  border: 1px solid #bf953f;
 }
 
 .submit:active {
   color: #aa771c;
+  border: 1px solid #aa771c;
 }
 
 .footer__title {

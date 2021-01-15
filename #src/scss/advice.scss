@@ -64,9 +64,11 @@
 		&:hover {
 			transform: scale(1.05);
 			color: #bf953f;
+			border: 1px solid #bf953f;
 		}
 		&:active {
 			color: #aa771c;
+			border: 1px solid #aa771c;
 		}
 	}
 }

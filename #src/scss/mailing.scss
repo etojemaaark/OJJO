@@ -65,9 +65,11 @@
 	margin-right: 15px;
 	transition: 0.4s;
 	padding: 15px 20px 14px 20px;
-	&:focus {
-		transform: scale(1.05);
+	&:hover {
 		box-shadow: 0 0px 4px #bf953f;
+	}
+	&:focus {
+		box-shadow: 0 0px 4px #aa771c;
 		&::placeholder {
 			opacity: 0;
 			transition: 0.4s ease;
@@ -98,8 +100,10 @@
 	&:hover {
 		transform: scale(1.05);
 		color: #bf953f;
+		border: 1px solid #bf953f;
 	}
 	&:active {
 		color: #aa771c;
+		border: 1px solid #aa771c;
 	}
 }
