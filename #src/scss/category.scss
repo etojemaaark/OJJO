@@ -80,7 +80,7 @@
 	background: #f9f9f9;
 	border: 1px solid #d6d6d6;
 	position: relative;
-	transition: 0.1s;
+	transition: all 0.3s;
 	&::after {
 		content: "";
 		position: absolute;
@@ -118,7 +118,6 @@
 	}
 }
 .tab-content {
-
 }
 .tab-content__item {
 	display: none;

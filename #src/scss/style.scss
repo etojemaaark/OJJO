@@ -9,15 +9,27 @@
 /// ПОДКЛЮЧЕНИЕ ШРИФТОВ ///
 
 @import "fonts.scss";
-$ff: "Gilroy"; /// ШРИФТ ПО УМОЛЧАНИЮ
 
 /// ПЕРЕМЕННЫЕ ///
 
-$minWidth: 320px;
-$maxWidth: 1100px;
-$md2: 750;
+// АДАПТИВ
+$minW: 320px;
+$maxW: 1920;
+$maxWC: 1170;
+$md1: $maxWC + 12;
+$md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;
+
+// MAIN COLORS
+$c1: #bf953f;
+$c2: #aa771c;
+$c3: red;
+$c4: red;
+$c5: red;
+
+// ШРИФТ ПО УМОЛЧАНИЮ
+$ff: "Gilroy";
 
 /// ОСНОВНАЯ СЕТКА ///
 body {
@@ -43,7 +55,7 @@ a {
 }
 
 .container {
-	max-width: $maxWidth;
+	max-width: $maxWC + px;
 	margin: 0 auto;
 	width: 100%;
 }
@@ -80,4 +92,3 @@ a {
 @import "socials.scss";
 @import "mailing.scss";
 @import "footer.scss";
-

@@ -224,6 +224,9 @@ gulp.task('svgSprite', function () {
 
 function cb() { }
 
+// PUG
+
+
 // Функция присмотра за файлами, смотрит за изменением файлов
 
 function watchFiles(params) {
