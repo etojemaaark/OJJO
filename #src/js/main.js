@@ -59,3 +59,20 @@ jsTriggers.forEach(function (trigger) {
 		content.classList.add('active'); // 4
 	});
 });
+
+
+/// ДЕЙСТВИЕ ПРИ КЛИКЕ ///
+
+$(function () {
+	$(".listing__bottom-btn").click(function () {
+		$(".listing__bottom-text-hidden").slideToggle();
+		$(".listing__bottom-text").toggleClass('active')
+		// if ($(".listing__bottom-text").hasClass("active")) {
+		// 	$(".listing__bottom-text").removeClass("active");
+		// 	$(".listing__bottom-btn").text('читать полностью')
+		// } else {
+		// 	$(".listing__bottom-text").addClass("active");
+		// 	$(".listing__bottom-btn").text('скрыть')
+		// }
+	})
+});

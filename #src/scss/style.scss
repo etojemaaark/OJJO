@@ -24,9 +24,9 @@ $md4: 479.98;
 // MAIN COLORS
 $c1: #bf953f;
 $c2: #aa771c;
-$c3: red;
-$c4: red;
-$c5: red;
+$c3: #333333;
+$c4: #d6d6d6;
+$c5: #b8b8b8;
 
 // ШРИФТ ПО УМОЛЧАНИЮ
 $ff: "Gilroy";
@@ -46,11 +46,11 @@ h2 {
 a {
 	transition: 0.3s;
 	&:hover {
-		color: #bf953f;
+		color: $c1;
 		text-decoration: underline;
 	}
 	&:active {
-		color: #aa771c;
+		color: $c2;
 	}
 }
 
@@ -92,3 +92,4 @@ a {
 @import "socials.scss";
 @import "mailing.scss";
 @import "footer.scss";
+@import "listing.scss";
