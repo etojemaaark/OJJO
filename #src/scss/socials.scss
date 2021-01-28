@@ -28,3 +28,16 @@
 		}
 	}
 }
+@media (max-width: $md1) {
+	.socials__items {
+		justify-content: center;
+		iframe {
+			flex: 0 0 100%;
+			width: 100%;
+		}
+		a {
+			flex: 0 0 50%;
+			min-width: 280px;
+		}
+	}
+}
