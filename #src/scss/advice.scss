@@ -7,6 +7,15 @@
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: 75px;
+		a {
+			margin: 0 20px;
+			&:first-child {
+				margin-left: 0;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		}
 	}
 
 	&__items-item {
@@ -69,6 +78,24 @@
 		&:active {
 			color: #aa771c;
 			border: 1px solid #aa771c;
+		}
+	}
+}
+@media (max-width: $md1) {
+	.advice__items {
+		flex-wrap: wrap;
+		justify-content: center;
+		a {
+			flex: 1 1 100%;
+			width: 350px;
+			margin: 0 10px 30px 10px;
+			&:first-child {
+				margin-left: 0;
+			}
+			&:last-child {
+				margin-bottom: 0;
+				margin-right: 0;
+			}
 		}
 	}
 }

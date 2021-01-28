@@ -76,3 +76,15 @@ $(function () {
 		// }
 	})
 });
+
+/// БУРГЕР ///
+
+$('.header__burger').click(function () {
+	$('.header__burger, .header__right, .header__menu-list').toggleClass('active');
+	$('body').toggleClass('lock');
+});
+
+$('.header__wrapper').click(function () {
+	$('..header__burger, .header__menu, .header__menu-list').removeClass('active');
+	$('body').removeClass('lock');
+});

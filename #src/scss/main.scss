@@ -1,11 +1,12 @@
 .main {
 	&__top {
 		position: absolute;
-		bottom: 0;
+		bottom: 0px;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		text-align: center;
 		h1 {
+			min-width: 730px;
 			font-size: 36px;
 			line-height: 49px;
 			color: white;
@@ -19,8 +20,7 @@
 	}
 
 	&__btn {
-		width: 261px;
-		height: 51px;
+		padding: 15px 35px;
 		margin-bottom: 80px;
 		color: white;
 		font-weight: 500;
@@ -58,4 +58,14 @@
 
 .swiper-pagination-bullet-active {
 	background: #bf953f !important;
+}
+@media (max-width: $md4) {
+	.main__top {
+		h1 {
+			min-width: 375px;
+		}
+	}
+	.main__btn {
+		margin-bottom: 10px;
+	}
 }

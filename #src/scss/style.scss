@@ -15,11 +15,11 @@
 // АДАПТИВ
 $minW: 320px;
 $maxW: 1920;
-$maxWC: 1170;
-$md1: $maxWC + 12;
-$md2: 991.98;
-$md3: 767.98;
-$md4: 479.98;
+$maxWC: 1146;
+$md1: 1146px;
+$md2: 991.98px;
+$md3: 767.98px;
+$md4: 479.98px;
 
 // MAIN COLORS
 $c1: #bf953f;
@@ -35,16 +35,9 @@ $ff: "Gilroy";
 body {
 	font-family: $ff;
 }
-h1,
-h2 {
-	font-weight: 700;
-	letter-spacing: 0.1em;
-}
-h2 {
-	display: inline-block;
-}
 a {
 	transition: 0.3s;
+	cursor: pointer;
 	&:hover {
 		color: $c1;
 		text-decoration: underline;
@@ -53,9 +46,18 @@ a {
 		color: $c2;
 	}
 }
+h1,
+h2 {
+	font-weight: 700;
+	letter-spacing: 0.1em;
+}
+h2 {
+	display: inline-block;
+}
 
 .container {
 	max-width: $maxWC + px;
+	padding: 0 12px;
 	margin: 0 auto;
 	width: 100%;
 }
