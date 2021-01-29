@@ -34,10 +34,9 @@
 			}
 		}
 	}
-
 	&__form {
-		width: 418px;
-		height: 85px;
+		max-width: 418px;
+		width: 100%;
 		background-color: white;
 		padding: 20px 22px;
 		display: flex;
@@ -105,5 +104,49 @@
 	&:active {
 		color: #aa771c;
 		border: 1px solid #aa771c;
+	}
+}
+@media (max-width: 858px) {
+	.mailing__items {
+		align-items: center;
+		ul {
+			align-items: center;
+			margin-right: 60px;
+		}
+	}
+	.mailing__form {
+		flex-direction: column;
+		padding: 30px;
+		&::after {
+			content: "";
+			position: absolute;
+			top: -19px;
+			left: -20px;
+			width: 300px;
+			height: 200px;
+			border: 1px solid #bf953f;
+			z-index: -1;
+		}
+	}
+	.email {
+		margin-right: 0;
+		margin-bottom: 15px;
+		&::placeholder {
+			text-align: center;
+		}
+	}
+	.submit {
+		width: 201px;
+		padding: 15px 20px 14px 20px;
+	}
+}
+@media (max-width: 632px) {
+	.mailing__items {
+		flex-direction: column;
+		justify-content: center;
+		ul {
+			margin-right: 0;
+			margin-bottom: 60px;
+		}
 	}
 }

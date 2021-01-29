@@ -80,11 +80,21 @@ $(function () {
 /// БУРГЕР ///
 
 $('.header__burger').click(function () {
-	$('.header__burger, .header__right, .header__menu-list').toggleClass('active');
+	$('.header__burger, .header__menu, .header__menu-list').toggleClass('active');
 	$('body').toggleClass('lock');
 });
 
 $('.header__wrapper').click(function () {
-	$('..header__burger, .header__menu, .header__menu-list').removeClass('active');
+	$('.header__burger, .header__menu, .header__menu-list').removeClass('active');
+	$('body').removeClass('lock');
+});
+
+$('.header__burger').click(function () {
+	$('.header__burger, .header-listing__menu-list').toggleClass('active');
+	$('body').toggleClass('lock');
+});
+
+$('.header-listing__wrapper').click(function () {
+	$('.header__burger, .header-listing__menu-list').removeClass('active');
 	$('body').removeClass('lock');
 });

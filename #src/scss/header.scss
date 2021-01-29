@@ -27,55 +27,33 @@
 	&__menu-list {
 		ul {
 			display: flex;
+			justify-content: space-between;
 			li {
-				&:not(:last-child) {
-					margin-right: 40px;
+				&:nth-child(-n + 5) {
+					margin-right: 75px;
+				}
+				&:nth-child(n + 5):nth-child(-n + 6) {
+					margin-right: 26px;
+				}
+				&:nth-child(n + 6):nth-child(-n + 7) {
+					transition: 0.3s;
+					&:hover {
+						stroke: $c1;
+						transform: scale(1.3);
+					}
+					&:active {
+						stroke: $c2;
+					}
 				}
 			}
 		}
-	}
-	&__right {
-		display: flex;
-		justify-content: space-between;
-
-		a {
-			&:nth-child(2) {
-				margin-right: 40px;
-			}
-			&:nth-child(3) {
-				margin-right: 40px;
-				transition: 0.3s;
-				svg {
-					width: 16px;
-					height: 16px;
-				}
-				&:hover {
-					stroke: $c1;
-					transform: scale(1.3);
-				}
-				&:active {
-					stroke: $c2;
-				}
-			}
-			&:nth-child(4) {
-				svg {
-					width: 16px;
-					height: 16px;
-				}
-				transition: 0.3s;
-				&:hover {
-					stroke: $c1;
-					transform: scale(1.3);
-				}
-				&:active {
-					stroke: $c2;
-				}
-			}
+		svg {
+			width: 16px;
+			height: 16px;
 		}
 	}
 	&__search {
 		display: flex;
-		margin: 0px 26px 0 0;
 		&:hover svg {
 			stroke: $c1;
 		}
@@ -93,13 +71,35 @@
 		display: none;
 	}
 }
+@media (max-width: $md1) {
+	.header__menu-list {
+		ul {
+			display: flex;
+			justify-content: space-between;
+			li {
+				&:nth-child(-n + 5) {
+					margin-right: 55px;
+				}
+				&:nth-child(n + 5):nth-child(-n + 6) {
+					margin-right: 16px;
+				}
+			}
+		}
+	}
+}
 @media (max-width: $md2) {
 	.header__wrapper {
 		display: flex;
 		justify-content: space-evenly;
 	}
 	.header__menu-list {
-		display: none;
+		ul {
+			li {
+				&:nth-child(-n + 3) {
+					display: none;
+				}
+			}
+		}
 	}
 }
 @media (max-width: $md3) {
@@ -155,17 +155,17 @@
 			bottom: 9px;
 		}
 	}
-	.header__right {
-		display: none;
-	}
-	.header__right.active {
-		display: flex;
-		flex-direction: column;
-		order: 3;
+	.header__menu-list {
+		ul {
+			li {
+				&:nth-child(n + 3) {
+					display: none;
+				}
+			}
+		}
 	}
 	.header__menu-list.active {
 		display: flex;
 		flex-direction: column;
-		order: 2;
 	}
 }

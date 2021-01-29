@@ -19,42 +19,40 @@
 	<header class="header">
 		<div class="container">
 			<div class="header__wrapper">
+				<a href="#"> <img src="img/logo.png" alt="Логотип OJJO"></a>
 				<nav class="header__menu-list">
 					<ul>
 						<li><a href="#">Контрагентам</a></li>
 						<li><a href="#">Дизайнерам</a></li>
 						<li><a href="#">Вакансии</a></li>
+						<li><a class="header__search" href="#">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#search"></use>
+								</svg>
+								Поиск
+							</a></li>
+						<li> <a href="#">Вход/Регистрация</a></li>
+						<li><a href="#">
+								<svg class="header__icons-account">
+									<use xlink:href="img/icons/icons.svg#account"></use>
+								</svg>
+							</a>
+						</li>
+						<li><a href="#">
+								<svg class="header__icons-like">
+									<use xlink:href="img/icons/icons.svg#like"></use>
+								</svg>
+							</a></li>
 					</ul>
 				</nav>
-				<a href="#"> <img src="img/logo.png" alt="Логотип OJJO"></a>
-				<div class="header__right">
-					<a href="#">
-						<div class="header__search">
-							<svg>
-								<use xlink:href="img/icons/icons.svg#search"></use>
-							</svg>
-							Поиск
-						</div>
-					</a>
-					<a href="#">Вход/Регистрация</a>
-					<a href="#">
-						<svg class="header__icons-account">
-							<use xlink:href="img/icons/icons.svg#account"></use>
-						</svg>
-					</a>
-					<a href="#">
-						<svg class="header__icons-like">
-							<use xlink:href="img/icons/icons.svg#like"></use>
-						</svg>
-					</a>
-				</div>
 				<div class="header__burger">
 					<span></span>
 				</div>
 			</div>
 		</div>
-	</header>
-	<section class="main">
+</div>
+</header>
+<section class="main">
 	<div class="container">
 		<div class="main__top">
 			<h1>Долго, дорого, богато!</h1>
@@ -99,7 +97,6 @@
 		</div>
 </section>
 </div>
-
 	<section class="category">
 	<div class="container">
 		<div class="category__wrapper">
@@ -388,6 +385,12 @@
 						<p>Как выбрать обручальные кольца молодоженам</p>
 					</div>
 				</a>
+				<a href="#">
+					<div class="advice__items-item">
+						<img src="img/advice-items/advice-item-3.jpg" alt="Обручальные кольца молодоженам">
+						<p>Как выбрать обручальные кольца молодоженам</p>
+					</div>
+				</a>
 			</div>
 			<button class="advice__btn">
 				читать наш блог
@@ -517,12 +520,14 @@
 				</div>
 			</div>
 		</div>
-		<div class="footer__bottom">
-			<p>(c) 2020 OJJO jewelry</p>
-			<a href="#">Договор публичной офферты</a>
-			<a href="#">Контрагентам</a>
-			<a href="https://roiburo.ru/">ROIburo</a>
-		</div>
+		<ul class="footer__bottom">
+			<li>
+				<p>(c) 2020 OJJO jewelry</p>
+			</li>
+			<li><a href="#">Договор публичной офферты</a></li>
+			<li><a href="#">Контрагентам</a></li>
+			<li><a href="https://roiburo.ru/">ROIburo</a></li>
+		</ul>
 	</div>
 </footer>
 
